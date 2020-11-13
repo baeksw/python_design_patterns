@@ -1,4 +1,4 @@
-from models import Url
+from model_view_controller.models import Url
 
 import pytest
 
@@ -13,3 +13,4 @@ def test_increment_string(instance):
     instance.shorten("abcdefg")
 
     assert False, "test_increment_string"
+

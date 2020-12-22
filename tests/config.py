@@ -1,16 +1,5 @@
-# -*- coding: utf-8 -*-
-# conftest.py
-#
-#-----------------------------------------------------------------
-# pytest - conftest.py
-# tests
-#   ratings/*.csv
-#   io/
-#       test_xxx.py
-#   conftest.py
-#-----------------------------------------------------------------
-import pytest
 import logging
+
 
 class SystemLoggerFactory:
 
@@ -30,10 +19,6 @@ class SystemLoggerFactory:
         logger.addHandler(streamHandler)
         return logger
 
-
 @pytest.fixture
-def logger():
-    test_logger = SystemLoggerFactory.create_stream_logger('test_logger')
-    return test_logger
 
-
+test_logger = SystemLoggerFactory.create_stream_logger('test_logger')

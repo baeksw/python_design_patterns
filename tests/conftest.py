@@ -31,9 +31,9 @@ class SystemLoggerFactory:
         return logger
 
 
+
 @pytest.fixture
 def logger():
     test_logger = SystemLoggerFactory.create_stream_logger('test_logger')
     return test_logger
-
 
